@@ -1,0 +1,79 @@
+:root {
+    --body: rgb(7, 7, 41);
+    --light-blue: rgb(125, 125, 221);
+    --purple: rgb(179, 69, 179);
+    --blue: rgb(18, 18, 80);
+    --white: #ece6e6;
+}
+
+body {
+    background-color: var(--body);
+    margin: 0;
+    padding: 0;
+}
+
+body header #fullHeadBanner {
+    background-color: var(--white);
+    height: 13vh;
+    width: 100vw;
+}
+
+body header #fullHeadBanner .centerAlignment {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    height: 10vh;
+}
+
+body header #fullHeadBanner .centerAlignment .headContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: right;
+    box-sizing: border-box;
+    width: 80vw;
+    height: 10vh;
+}
+
+body header #fullHeadBanner .centerAlignment .headContainer #leftHeading {
+    position: relative;
+    top: 5vh;
+    width: 40vw;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: end;
+}
+
+body header #fullHeadBanner .centerAlignment .headContainer #leftHeading #left {
+    position: fixed;
+    left: 0vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+}
+
+body header #fullHeadBanner .centerAlignment .headContainer #leftHeading ul {
+    list-style-type: none;
+    display: flex;
+}
+
+body header #fullHeadBanner .centerAlignment .headContainer #leftHeading ul #instagram {
+    position: fixed;
+    top: 5vh;
+}
+
+body header #fullHeadBanner .centerAlignment .headContainer #leftHeading ul #github {
+    position: fixed;
+    top: 7.5vh;
+}
+
+body header #fullHeadBanner .centerAlignment .headContainer #leftHeading ul #contact {
+    position: fixed;
+    top: 10vh;
+}
+
+body header #fullHeadBanner .centerAlignment .headContainer #rightHeading {
+    width: 40vw;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
