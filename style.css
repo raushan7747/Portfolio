@@ -6,74 +6,104 @@
     --white: #ece6e6;
 }
 
-body {
-    background-color: var(--body);
+* {
     margin: 0;
     padding: 0;
 }
 
-body header #fullHeadBanner {
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--body);
+}
+
+body header #headTop {
     background-color: var(--white);
-    height: 13vh;
-    width: 100vw;
-}
-
-body header #fullHeadBanner .centerAlignment {
-    display: flex;
-    justify-content: center;
-    width: 100vw;
     height: 10vh;
 }
 
-body header #fullHeadBanner .centerAlignment .headContainer {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: right;
-    box-sizing: border-box;
-    width: 80vw;
-    height: 10vh;
-}
-
-body header #fullHeadBanner .centerAlignment .headContainer #leftHeading {
+body header #headTop #rightHalf {
     position: relative;
-    top: 5vh;
-    width: 40vw;
+    float: right;
+    top: 0;
+    width: 50%;
+    height: 7vh;
+}
+
+body header #headTop #rightHalf #rightHeading {
+    float: right;
+}
+
+body header #headDown {
+    background-color: #000000;
+    position: absolute;
+    border-bottom: solid 0.1vw var(--light-blue);
+    width: 100vw;
+    top: 7vh;
+    height: 3vh;
+}
+
+body header #headDown #leftHalf {
+    position: relative;
+    float: left;
+    top: 0;
+    width: 50%;
+    height: 3vh;
+}
+
+body header #headDown #leftHalf #leftHeading {
+    width: 50vw;
     display: flex;
     flex-wrap: wrap;
     align-items: end;
 }
 
-body header #fullHeadBanner .centerAlignment .headContainer #leftHeading #left {
-    position: fixed;
-    left: 0vw;
+body header #headDown #leftHalf #leftHeading #left {
+    width: 50vw;
+    height: 3vh;
     display: flex;
     flex-wrap: wrap;
     justify-content: left;
 }
 
-body header #fullHeadBanner .centerAlignment .headContainer #leftHeading ul {
+body header #headDown #leftHalf #leftHeading #left ul {
     list-style-type: none;
+    width: 50vw;
+    height: 3vh;
     display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    justify-content: space-around;
 }
 
-body header #fullHeadBanner .centerAlignment .headContainer #leftHeading ul #instagram {
-    position: fixed;
-    top: 5vh;
+body header #headDown #leftHalf #leftHeading #left ul li a {
+    text-decoration: none;
 }
 
-body header #fullHeadBanner .centerAlignment .headContainer #leftHeading ul #github {
-    position: fixed;
-    top: 7.5vh;
+body header #headDown #leftHalf #leftHeading #left ul li a #instagram {
+    color: rgb(255, 0, 212);
+    color: var(--white);
+    font-size: 1vw;
+    position: relative;
 }
 
-body header #fullHeadBanner .centerAlignment .headContainer #leftHeading ul #contact {
-    position: fixed;
-    top: 10vh;
+body header #headDown #leftHalf #leftHeading #left ul li a #github {
+    color: var(--white);
+    font-size: 1vw;
+    position: relative;
 }
 
-body header #fullHeadBanner .centerAlignment .headContainer #rightHeading {
-    width: 40vw;
-    display: flex;
-    justify-content: right;
-    align-items: center;
+body header #headDown #leftHalf #leftHeading #left ul li a #contact {
+    color: var(--white);
+    font-size: 1vw;
+    position: relative;
+}
+
+body header #headDown #leftHalf #leftHeading #left ul li a #instagram i {
+    color: rgb(255, 0, 212);
+}
+body header #headDown #leftHalf #leftHeading #left ul li a #github i {
+    color: rgb(255, 6, 6);
+}
+body header #headDown #leftHalf #leftHeading #left ul li a #contact i {
+    color: rgb(77, 221, 113);
 }
