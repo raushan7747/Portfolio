@@ -9,6 +9,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -16,94 +17,103 @@ body {
     background-color: var(--body);
 }
 
-body header #headTop {
-    background-color: var(--white);
+body header #headerFlex {
+    display: flex;
     height: 10vh;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color: var(--white);
 }
 
-body header #headTop #rightHalf {
+body header #headerFlex #headTop {
+    align-self: flex-end;
+    width: 100%;
+    height: 5vh;
+    background-color: var(--body);
+    border-bottom: var(--light-blue) .3vh solid;
+}
+
+body header #headerFlex #headTop #rightHalf #rightHeading #right {
     position: relative;
     float: right;
-    top: 0;
-    width: 50%;
-    height: 7vh;
+    color: var(--white);
 }
 
-body header #headTop #rightHalf #rightHeading {
-    float: right;
+body header #headerFlex #headDown {
+    align-self: flex-start;
+    height: 5vh;
+    width: 100%;
+    background-color: var(--white);
+    border-bottom: var(--light-blue) .5vh solid;
 }
 
-body header #headDown {
-    background-color: #000000;
-    position: absolute;
-    border-bottom: solid 0.1vw var(--light-blue);
-    width: 100vw;
-    top: 7vh;
-    height: 3vh;
-}
-
-body header #headDown #leftHalf {
-    position: relative;
-    float: left;
-    top: 0;
-    width: 50%;
-    height: 3vh;
-}
-
-body header #headDown #leftHalf #leftHeading {
-    width: 50vw;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: end;
-}
-
-body header #headDown #leftHalf #leftHeading #left {
-    width: 50vw;
-    height: 3vh;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: left;
-}
-
-body header #headDown #leftHalf #leftHeading #left ul {
+body header #headerFlex #headDown #leftHalf #leftHeading #left ul {
     list-style-type: none;
     width: 50vw;
     height: 3vh;
     display: flex;
-    flex-wrap: wrap;
     box-sizing: border-box;
     justify-content: space-around;
 }
 
-body header #headDown #leftHalf #leftHeading #left ul li a {
+body header #headerFlex #headDown #leftHalf #leftHeading #left ul li a {
+    font-weight: 750;
     text-decoration: none;
 }
 
-body header #headDown #leftHalf #leftHeading #left ul li a #instagram {
-    color: rgb(255, 0, 212);
-    color: var(--white);
-    font-size: 1vw;
+body header #headerFlex #headDown #leftHalf #leftHeading #left ul li a #instagram {
+    color: var(--body);
+    font-size: 65%;
     position: relative;
 }
 
-body header #headDown #leftHalf #leftHeading #left ul li a #github {
-    color: var(--white);
-    font-size: 1vw;
+body header #headerFlex #headDown #leftHalf #leftHeading #left ul li a #github {
+    color: var(--body);
+    font-size: 65%;
     position: relative;
 }
 
-body header #headDown #leftHalf #leftHeading #left ul li a #contact {
-    color: var(--white);
-    font-size: 1vw;
+body header #headerFlex #headDown #leftHalf #leftHeading #left ul li a #contact {
+    color: var(--body);
+    font-size: 65%;
     position: relative;
 }
 
-body header #headDown #leftHalf #leftHeading #left ul li a #instagram i {
-    color: rgb(255, 0, 212);
+body header #headerFlex #headDown #leftHalf #leftHeading #left ul li a #instagram i {
+    font-size: 120%;
+    color: rgb(255, 47, 220);
 }
-body header #headDown #leftHalf #leftHeading #left ul li a #github i {
-    color: rgb(255, 6, 6);
+
+body header #headerFlex #headDown #leftHalf #leftHeading #left ul li a #github i {
+    font-size: 120%;
+    color: var(--body);
 }
-body header #headDown #leftHalf #leftHeading #left ul li a #contact i {
-    color: rgb(77, 221, 113);
+
+body header #headerFlex #headDown #leftHalf #leftHeading #left ul li a #contact i {
+    font-size: 120%;
+    color: rgb(240, 63, 63);
+}
+
+@media screen and (max-width: 800px) {
+
+    body header #headerFlex #headDown {
+        align-self: flex-start;
+        display: flex;
+        align-items: center;
+    }
+
+}
+
+@media screen and (max-width: 400px) {
+    body header #headerFlex #headDown #leftHalf #leftHeading #left ul li a #instagram {
+        font-size: 50%;
+    }
+
+    body header #headerFlex #headDown #leftHalf #leftHeading #left ul li a #github {
+        font-size: 50%;
+    }
+
+    body header #headerFlex #headDown #leftHalf #leftHeading #left ul li a #contact {
+        font-size: 50%;
+    }
 }
