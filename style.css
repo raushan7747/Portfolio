@@ -17,7 +17,16 @@ body {
     background-color: var(--body);
 }
 
+body main {
+    position: absolute;
+    top: 10vh;
+    z-index: 1;
+}
+
 body header #headerFlex {
+    position: fixed;
+    width: 100%;
+    z-index: 10;
     display: flex;
     height: 10vh;
     flex-direction: column;
@@ -47,6 +56,10 @@ body header #headerFlex #headDown {
     border-bottom: var(--light-blue) .5vh solid;
 }
 
+body header #headerFlex #headDown:hover {
+    background-color: darkorange;
+}
+
 body header #headerFlex #headDown #leftHalf #leftHeading #left ul {
     list-style-type: none;
     width: 50vw;
@@ -62,6 +75,7 @@ body header #headerFlex #headDown #leftHalf #leftHeading #left ul li a {
 }
 
 body header #headerFlex #headDown #leftHalf #leftHeading #left ul li a #instagram {
+    color: rgb(255, 0, 212);
     color: var(--body);
     font-size: 65%;
     position: relative;
@@ -81,7 +95,7 @@ body header #headerFlex #headDown #leftHalf #leftHeading #left ul li a #contact 
 
 body header #headerFlex #headDown #leftHalf #leftHeading #left ul li a #instagram i {
     font-size: 120%;
-    color: rgb(255, 47, 220);
+    color: rgb(255, 0, 212);
 }
 
 body header #headerFlex #headDown #leftHalf #leftHeading #left ul li a #github i {
@@ -91,7 +105,7 @@ body header #headerFlex #headDown #leftHalf #leftHeading #left ul li a #github i
 
 body header #headerFlex #headDown #leftHalf #leftHeading #left ul li a #contact i {
     font-size: 120%;
-    color: rgb(240, 63, 63);
+    color: rgb(255, 6, 6);
 }
 
 @media screen and (max-width: 800px) {
