@@ -93,6 +93,30 @@ body header #headerFlex #headDown #leftHalf #leftHeading #left ul li a #contact 
     position: relative;
 }
 
+body header #headerFlex #headDown #leftHalf #leftHeading #left ul li a #instagram:hover {
+    color: aliceblue
+}
+
+body header #headerFlex #headDown #leftHalf #leftHeading #left ul li a #instagram i:hover {
+    color: aliceblue
+}
+
+body header #headerFlex #headDown #leftHalf #leftHeading #left ul li a #github:hover {
+    color: aliceblue
+}
+
+body header #headerFlex #headDown #leftHalf #leftHeading #left ul li a #github i:hover {
+    color: aliceblue
+}
+
+body header #headerFlex #headDown #leftHalf #leftHeading #left ul li a #contact:hover {
+    color: aliceblue
+}
+
+body header #headerFlex #headDown #leftHalf #leftHeading #left ul li a #contact i:hover {
+    color: aliceblue
+}
+
 body header #headerFlex #headDown #leftHalf #leftHeading #left ul li a #instagram i {
     font-size: 120%;
     color: rgb(255, 0, 212);
