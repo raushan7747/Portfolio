@@ -1,29 +1,30 @@
+/* Global variables */
 :root {
     --body: rgb(7, 7, 41);
-    --light-blue: rgb(125, 125, 221);
+    --light-blue: rgb(125, 125, 221);	
     --purple: rgb(179, 69, 179);
     --blue: rgb(18, 18, 80);
     --white: #ece6e6;
 }
-
+/* Adjustments to the whole web */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
+/* Fonts and Background of the main-body */
 body {
     font-family: 'Poppins', sans-serif;
     background-color: var(--body);
 }
-
+/* Contents and the whole stuffs */
 body main {
     position: absolute;
     top: 10vh;
     z-index: 1;
 }
-
-body header #headerFlex {
+/* Start Header(main) */
+body header #hfx {
     position: fixed;
     width: 100%;
     z-index: 10;
@@ -33,34 +34,37 @@ body header #headerFlex {
     flex-wrap: wrap;
     background-color: var(--white);
 }
-
-body header #headerFlex #headTop {
+/* Start Header-Top */
+body header #hfx #htp {
     align-self: flex-end;
     width: 100%;
     height: 5vh;
     background-color: var(--body);
     border-bottom: var(--light-blue) .3vh solid;
 }
-
-body header #headerFlex #headTop #rightHalf #rightHeading #right {
+/* Header-Top and right Heading's Raushan's Portfolio */
+body header #hfx #htp #rhf #rhng #right {
     position: relative;
     float: right;
     color: var(--white);
 }
-
-body header #headerFlex #headDown {
+/* End Header-Top */
+/* Start Header-Down */
+body header #hfx #hdwn {
     align-self: flex-start;
     height: 5vh;
     width: 100%;
     background-color: var(--white);
     border-bottom: var(--light-blue) .5vh solid;
 }
-
-body header #headerFlex #headDown:hover {
+/* Header-Down when hovered */
+body header #hfx #hdwn:hover {
     background-color: darkorange;
 }
-
-body header #headerFlex #headDown #leftHalf #leftHeading #left ul {
+/* Header-Down unordered list of direct-cnct */
+body header #hfx #hdwn #lhf #lhng #left ul {
+    position: absolute;
+    right: 0;
     list-style-type: none;
     width: 50vw;
     height: 3vh;
@@ -69,72 +73,143 @@ body header #headerFlex #headDown #leftHalf #leftHeading #left ul {
     justify-content: space-around;
 }
 
-body header #headerFlex #headDown #leftHalf #leftHeading #left ul li a {
+/* Header-Down Ham-Burger left navigation menu bar */
+body header #hfx #hdwn #lhf #lhng #left #mbar {
+    display: flex;
+    justify-content: flex-start;
+    padding: 3vh 1vw;
+    position: absolute;
+    left: 0;
+    top: 2.5vh;
+}
+/* Header-Down Ham-Burger Bars-container(4 Bars) */
+body header #hfx #hdwn #lhf #lhng #left #mbar .mbar {
+display: block;
+width: 4vw;
+    height: 4vh;
+    cursor: pointer;
+    position: relative;
+}
+/* Header-Down Bar of the Ham-Burger */
+body header #hfx #hdwn #lhf #lhng #left #mbar .mbar .bar {
+    display: block;
+    width: 2vw;
+    height: .3vh;
+    background-color: #333;
+    margin: .5vh auto;
+    transition: all 0.3s ease-in-out;
+}
+/* JavaScript Ham-Burger animation */
+/* Header-Down Ham-Burger bars animation/visualization after clicking on Ham-Burger container */
+body header #hfx #hdwn #lhf #lhng #left #mbar .mbar.mbtn .bar:nth-child(2),
+body header #hfx #hdwn #lhf #lhng #left #mbar .mbar.mbtn .bar:nth-child(3) {
+    opacity: 0;
+}
+/* Header-Down Right-Down transition bar */
+body header #hfx #hdwn #lhf #lhng #left #mbar .mbar.mbtn .bar:first-child {
+    transform: translateY(8px) rotate(135deg);
+}
+/* Header-Down Left-Up transition bar */
+body header #hfx #hdwn #lhf #lhng #left #mbar .mbar.mbtn .bar:last-child {
+    transform: translateY(-8px) rotate(45deg);
+}
+/* End JavaScript Ham-Burger animation */
+/* Header-Down list container */
+body header #hfx #hdwn #lhf #lhng #left ul li a {
     font-weight: 750;
     text-decoration: none;
 }
-
-body header #headerFlex #headDown #leftHalf #leftHeading #left ul li a #instagram {
+/* Header-Down Start list element */
+body header #hfx #hdwn #lhf #lhng #left ul li a #igm {
     color: rgb(255, 0, 212);
     color: var(--body);
     font-size: 65%;
     position: relative;
 }
 
-body header #headerFlex #headDown #leftHalf #leftHeading #left ul li a #github {
+body header #hfx #hdwn #lhf #lhng #left ul li a #git {
     color: var(--body);
     font-size: 65%;
     position: relative;
 }
 
-body header #headerFlex #headDown #leftHalf #leftHeading #left ul li a #contact {
+body header #hfx #hdwn #lhf #lhng #left ul li a #cnct {
     color: var(--body);
     font-size: 65%;
     position: relative;
 }
-
-body header #headerFlex #headDown #leftHalf #leftHeading #left ul li a #instagram:hover {
+/* Header-Down End list element */
+/* Header-Down Start list element hovered */
+body header #hfx #hdwn #lhf #lhng #left ul li a #igm:hover {
+    color: aliceblue
+}
+/* Header-Down Start icon list hovered */
+body header #hfx #hdwn #lhf #lhng #left ul li a #igm i:hover {
     color: aliceblue
 }
 
-body header #headerFlex #headDown #leftHalf #leftHeading #left ul li a #instagram i:hover {
+body header #hfx #hdwn #lhf #lhng #left ul li a #git:hover {
     color: aliceblue
 }
 
-body header #headerFlex #headDown #leftHalf #leftHeading #left ul li a #github:hover {
+body header #hfx #hdwn #lhf #lhng #left ul li a #git i:hover {
     color: aliceblue
 }
 
-body header #headerFlex #headDown #leftHalf #leftHeading #left ul li a #github i:hover {
+body header #hfx #hdwn #lhf #lhng #left ul li a #cnct:hover {
     color: aliceblue
 }
 
-body header #headerFlex #headDown #leftHalf #leftHeading #left ul li a #contact:hover {
+body header #hfx #hdwn #lhf #lhng #left ul li a #cnct i:hover {
     color: aliceblue
 }
-
-body header #headerFlex #headDown #leftHalf #leftHeading #left ul li a #contact i:hover {
-    color: aliceblue
-}
-
-body header #headerFlex #headDown #leftHalf #leftHeading #left ul li a #instagram i {
+/* Header-Down End icon list element hovered */
+/* Header-Down End list element hovered */
+/* Header-Down Start icon size and color of the list element hovered */
+body header #hfx #hdwn #lhf #lhng #left ul li a #igm i {
     font-size: 120%;
     color: rgb(255, 0, 212);
 }
 
-body header #headerFlex #headDown #leftHalf #leftHeading #left ul li a #github i {
+body header #hfx #hdwn #lhf #lhng #left ul li a #git i {
     font-size: 120%;
     color: var(--body);
 }
 
-body header #headerFlex #headDown #leftHalf #leftHeading #left ul li a #contact i {
+body header #hfx #hdwn #lhf #lhng #left ul li a #cnct i {
     font-size: 120%;
     color: rgb(255, 6, 6);
 }
+/* Header-Down End icon of the list element hovered */
+/* End Header */
+/* Start main(main-content) */
+body main #msec {
+    display: flex;
+}
 
+body main #msec #sec1 {
+    display: grid;
+}
+
+body main #msec #sec2 {
+    display: grid;
+}
+
+body main #msec #sec3 {
+    display: grid;
+}
+
+body main #msec #sec4 {
+    display: grid;
+}
+
+body main #msec #sec5 {
+    display: grid;
+}
+/* End main(main-content) */
 @media screen and (max-width: 800px) {
 
-    body header #headerFlex #headDown {
+    body header #hfx #hdwn {
         align-self: flex-start;
         display: flex;
         align-items: center;
@@ -143,15 +218,15 @@ body header #headerFlex #headDown #leftHalf #leftHeading #left ul li a #contact 
 }
 
 @media screen and (max-width: 400px) {
-    body header #headerFlex #headDown #leftHalf #leftHeading #left ul li a #instagram {
+    body header #hfx #hdwn #lhf #lhng #left ul li a #igm {
         font-size: 50%;
     }
 
-    body header #headerFlex #headDown #leftHalf #leftHeading #left ul li a #github {
+    body header #hfx #hdwn #lhf #lhng #left ul li a #git {
         font-size: 50%;
     }
 
-    body header #headerFlex #headDown #leftHalf #leftHeading #left ul li a #contact {
+    body header #hfx #hdwn #lhf #lhng #left ul li a #cnct {
         font-size: 50%;
     }
 }
