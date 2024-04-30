@@ -25,7 +25,7 @@ body main {
     position: absolute;
     top: 10vh;
     z-index: 1;
-    padding: 1vh 4vw;
+    padding: 3vh 4vw;
 }
 
 /* Start Header(main) */
@@ -34,7 +34,7 @@ body header #hfx {
     width: 100%;
     z-index: 10;
     display: flex;
-    height: 10vh;
+    height: 12vh;
     flex-direction: column;
     flex-wrap: wrap;
     background-color: var(--white);
@@ -60,7 +60,7 @@ body header #hfx #htp #rhf #rhng #right {
 /* Start Header-Down */
 body header #hfx #hdwn {
     align-self: flex-start;
-    height: 5vh;
+    height: 7vh;
     width: 100%;
     background-color: var(--white);
     border-bottom: var(--light-blue) .5vh solid;
@@ -90,7 +90,7 @@ body header #hfx #hdwn #lhf #lhng #left #mbar {
     padding: 3vh 1vw;
     position: absolute;
     left: 0;
-    top: 2.5vh;
+    top: 3.5vh;
 }
 
 /* Header-Down Ham-Burger Bars-container(4 Bars) */
@@ -131,6 +131,9 @@ body header #hfx #hdwn #lhf #lhng #left #mbar .mbar.mbtn .bar:last-child {
 
 /* End JavaScript Ham-Burger animation */
 /* Header-Down list container */
+body header #hfx #hdwn #lhf #lhng #left ul li{
+    padding: 1vh 0;
+}
 body header #hfx #hdwn #lhf #lhng #left ul li a {
     font-weight: 750;
     text-decoration: none;
