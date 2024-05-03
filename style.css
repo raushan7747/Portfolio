@@ -17,15 +17,17 @@
 /* Fonts and Background of the main-body */
 body {
     font-family: 'Poppins', sans-serif;
+    font-size: 4vw;
     background-color: var(--body);
 }
 
 /* Contents and the whole stuffs */
 body main {
     position: absolute;
-    top: 10vh;
+    top: 9vh;
     z-index: 1;
     padding: 3vh 4vw;
+    font-size: 1.5vw;
 }
 
 /* Start Header(main) */
@@ -191,37 +193,36 @@ body header #hfx #hdwn #lhf #lhng #left ul li a #cnct i {
 /* Header-Down End icon of the list element hovered */
 /* End Header */
 /* Start main(main-content) */
-body main #msec {
-    display: flex;
+body main .navBar-full {
+    background-color: white;
+    width: 92vw;
+    height: 15vw;
 }
 
-body main #msec #sec1 {
+/* Start NavBar menus grid */
+body main .navBar-full {
     display: grid;
+    grid-template-rows: repeat(auto-fill, 1fr);
 }
 
-body main #msec #sec1 #show-case-flex {
-    list-style: none;
+body main .navBar-full #navSection-1,
+body main .navBar-full #navSection-2,
+body main .navBar-full #navSection-3,
+body main .navBar-full #navSection-4 {
+    background-color: red;
+    border: solid black;
 }
 
-body main #msec #sec2 {
-    display: grid;
-}
+/* Start NavBar menus grid */
 
-body main #msec #sec3 {
-    display: grid;
-}
-
-body main #msec #sec4 {
-    display: grid;
-}
-
-body main #msec #sec5 {
-    display: grid;
+.navBar.navToggle .navBar-full {
+    /* smooth Trasition navigation bar toggle */
+    display: none;
 }
 
 /* End main(main-content) */
-@media screen and (max-width: 500px) {
 
+@media screen and (max-width: 500px) {
     body header #hfx #hdwn #lhf #lhng #left ul li {
         padding: 2vh 0;
         font-size: 3vw;
@@ -239,15 +240,6 @@ body main #msec #sec5 {
 
 
 @media screen and (min-width: 501px) {
-    body {
-        font-size: 4vh;
-    }
-
-    /* Contents and the whole stuffs */
-    body main {
-        font-size: 3.5vh;
-    }
-
     body header #hfx #hdwn #lhf #lhng #left #mbar .mbar {
         width: 7vw;
     }
@@ -257,13 +249,16 @@ body main #msec #sec5 {
     }
 }
 
-@media screen and (min-height: 800px) {
+@media screen and (min-width: 1200px) {
     body {
-        font-size: 2vh;
+        font-size: 2vw;
     }
 
-    /* Contents and the whole stuffs */
-    body main {
-        font-size: 1.5vh;
+    body header #hfx #hdwn #lhf #lhng #left #mbar .mbar {
+        width: 3vw;
+    }
+
+    body header #hfx #hdwn #lhf #lhng #left #mbar .mbar .bar {
+        width: 3vw;
     }
 }
