@@ -193,29 +193,47 @@ body header #hfx #hdwn #lhf #lhng #left ul li a #cnct i {
 /* Header-Down End icon of the list element hovered */
 /* End Header */
 /* Start main(main-content) */
-body main .navBar-full {
+body main .navBar,
+body main .navBar .navBar-menu,
+body main .navBar .navBar-menu .navBar-full {
     background-color: white;
     width: 92vw;
     height: 15vw;
 }
 
-/* Start NavBar menus grid */
-body main .navBar-full {
-    display: grid;
-    grid-template-rows: repeat(auto-fill, 1fr);
+/* Start NavBar menus */
+body main .navBar .navBar-menu .navBar-full {
+    display: flex;
+    font-size: 90%;
+    font-weight: 700;
+    justify-content: space-around;
+    color: var(--body);
+    background-color: var(--white);
 }
 
-body main .navBar-full #navSection-1,
-body main .navBar-full #navSection-2,
-body main .navBar-full #navSection-3,
-body main .navBar-full #navSection-4 {
-    background-color: red;
-    border: solid black;
+/* End NavBar menus */
+
+
+body main .navBar .navBar-menu .navBar-full #navSection-1,
+body main .navBar .navBar-menu .navBar-full #navSection-2,
+body main .navBar .navBar-menu .navBar-full #navSection-3,
+body main .navBar .navBar-menu .navBar-full #navSection-4 {
+    display: flex;
+    width: 18%;
+    justify-content: space-between;
 }
 
-/* Start NavBar menus grid */
+/* Start navBar menus */
+body main .navBar .navBar-menu .navBar-full #navSection-1 #menu-1,
+body main .navBar .navBar-menu .navBar-full #navSection-2 #menu-2,
+body main .navBar .navBar-menu .navBar-full #navSection-3 #menu-3,
+body main .navBar .navBar-menu .navBar-full #navSection-4 #menu-4 {
+    width: 73%;
+}
 
-.navBar.navToggle .navBar-full {
+/* End navBar menus */
+
+.navBar.navToggle {
     /* smooth Trasition navigation bar toggle */
     display: none;
 }
@@ -237,7 +255,11 @@ body main .navBar-full #navSection-4 {
     }
 }
 
-
+@media screen and (min-height: 700px) {
+    body {
+        font-size: 3vh;
+    }
+}
 
 @media screen and (min-width: 501px) {
     body header #hfx #hdwn #lhf #lhng #left #mbar .mbar {
@@ -251,7 +273,7 @@ body main .navBar-full #navSection-4 {
 
 @media screen and (min-width: 1200px) {
     body {
-        font-size: 2vw;
+        font-size: 4vh;
     }
 
     body header #hfx #hdwn #lhf #lhng #left #mbar .mbar {
