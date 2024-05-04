@@ -36,7 +36,7 @@ body header #hfx {
     width: 100%;
     z-index: 10;
     display: flex;
-    height: 12vh;
+    height: 16vh;
     flex-direction: column;
     flex-wrap: wrap;
     background-color: var(--white);
@@ -46,7 +46,8 @@ body header #hfx {
 body header #hfx #htp {
     align-self: flex-end;
     width: 100%;
-    height: 5vh;
+    height: 8vh;
+    font-size: 2vw;
     background-color: var(--body);
     border-bottom: var(--light-blue) .3vh solid;
 }
@@ -62,7 +63,7 @@ body header #hfx #htp #rhf #rhng #right {
 /* Start Header-Down */
 body header #hfx #hdwn {
     align-self: flex-start;
-    height: 7vh;
+    height: 8vh;
     width: 100%;
     background-color: var(--white);
     border-bottom: var(--light-blue) .5vh solid;
@@ -79,7 +80,8 @@ body header #hfx #hdwn #lhf #lhng #left ul {
     right: 0;
     list-style-type: none;
     width: 50vw;
-    height: 3vh;
+    height: 5vh;
+    font-size: 2vw;
     display: flex;
     box-sizing: border-box;
     justify-content: space-around;
@@ -92,7 +94,7 @@ body header #hfx #hdwn #lhf #lhng #left #mbar {
     padding: 3vh 1vw;
     position: absolute;
     left: 0;
-    top: 3.5vh;
+    top: 7vh;
 }
 
 /* Header-Down Ham-Burger Bars-container(4 Bars) */
@@ -133,9 +135,6 @@ body header #hfx #hdwn #lhf #lhng #left #mbar .mbar.mbtn .bar:last-child {
 
 /* End JavaScript Ham-Burger animation */
 /* Header-Down list container */
-body header #hfx #hdwn #lhf #lhng #left ul li {
-    padding: 1vh 0;
-}
 
 body header #hfx #hdwn #lhf #lhng #left ul li a {
     font-weight: 750;
@@ -196,6 +195,8 @@ body header #hfx #hdwn #lhf #lhng #left ul li a #cnct i {
 body main .navBar,
 body main .navBar .navBar-menu,
 body main .navBar .navBar-menu .navBar-full {
+    position: fixed;
+    top: 16vh;
     background-color: white;
     width: 92vw;
     height: 15vw;
@@ -240,30 +241,32 @@ body main .navBar .navBar-menu .navBar-full #navSection-4 #menu-4 {
 
 /* End main(main-content) */
 
-@media screen and (max-width: 500px) {
-    body header #hfx #hdwn #lhf #lhng #left ul li {
-        padding: 2vh 0;
-        font-size: 3vw;
+@media screen and (min-width:801px) and (max-height: 800px) {
+    body header #hfx {
+        height: 16vh;
+        font-size: 2vw;
+    }
+
+    body header #hfx #htp,
+    body header #hfx #hdwn {
+        font-size: 4vh;
+        height: 8vh;
+    }
+
+    body header #hfx #hdwn #lhf #lhng #left #mbar {
+        padding: 7.5vh 2vw;
+        top: 2vh;
+    }
+
+    body main .navBar,
+    body main .navBar .navBar-menu,
+    body main .navBar .navBar-menu .navBar-full {
+        position: fixed;
+        top: 15.5vh;
     }
 
     body header #hfx #hdwn #lhf #lhng #left #mbar .mbar {
-        width: 10vw;
-    }
-
-    body header #hfx #hdwn #lhf #lhng #left #mbar .mbar .bar {
-        width: 10vw;
-    }
-}
-
-@media screen and (min-height: 700px) {
-    body {
-        font-size: 3vh;
-    }
-}
-
-@media screen and (min-width: 501px) {
-    body header #hfx #hdwn #lhf #lhng #left #mbar .mbar {
-        width: 7vw;
+        width: 5vw;
     }
 
     body header #hfx #hdwn #lhf #lhng #left #mbar .mbar .bar {
@@ -271,16 +274,38 @@ body main .navBar .navBar-menu .navBar-full #navSection-4 #menu-4 {
     }
 }
 
-@media screen and (min-width: 1200px) {
-    body {
-        font-size: 4vh;
+@media screen and (max-width:800px) and (min-height: 801px) {
+    body main{
+        top: 7vh;
+    }
+    body header #hfx {
+        height: 10vh;
+        font-size: 2vw;
+    }
+
+    body header #hfx #htp,
+    body header #hfx #hdwn {
+        font-size: 2vh;
+        height: 5vh;
+    }
+
+    body header #hfx #hdwn #lhf #lhng #left #mbar {
+        padding: 3.5vh 2vw;
+        top: 2vh;
+    }
+
+    body main .navBar,
+    body main .navBar .navBar-menu,
+    body main .navBar .navBar-menu .navBar-full {
+        position: fixed;
+        top: 10vh;
     }
 
     body header #hfx #hdwn #lhf #lhng #left #mbar .mbar {
-        width: 3vw;
+        width: 5vw;
     }
 
     body header #hfx #hdwn #lhf #lhng #left #mbar .mbar .bar {
-        width: 3vw;
+        width: 5vw;
     }
 }
