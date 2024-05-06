@@ -221,6 +221,12 @@ body main .navBar .navBar-menu .navBar-full {
 }
 
 /* End Transition and Transformation of navBar  */
+/* Start Shifting main-contents to the bottom of navbar */
+body main .main-content.main-content-toggle{
+    position: relative;
+    top: 15vh;
+}
+/* End Shifting main-contents to the bottom of navbar */
 /* Start NavBar menus */
 body main .navBar .navBar-menu .navBar-full {
     display: flex;
