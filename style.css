@@ -222,10 +222,11 @@ body main .navBar .navBar-menu .navBar-full {
 
 /* End Transition and Transformation of navBar  */
 /* Start Shifting main-contents to the bottom of navbar */
-body main .main-content.main-content-toggle{
+body main .main-content.main-content-toggle {
     position: relative;
     top: 30vh;
 }
+
 /* End Shifting main-contents to the bottom of navbar */
 /* Start NavBar menus */
 body main .navBar .navBar-menu .navBar-full {
@@ -265,6 +266,12 @@ body main .navBar .navBar-menu .navBar-full #navSection-1 #menu-1 #Programming-l
 
 /* End main(main-content) */
 
+@media screen and (min-width:800px) and (min-height: 1200px) {
+    body main .main-content.main-content-toggle {
+        top: 10vh;
+    }
+}
+
 @media screen and (min-width:801px) and (max-height: 800px) {
     body header #hfx {
         height: 16vh;
@@ -284,9 +291,31 @@ body main .navBar .navBar-menu .navBar-full #navSection-1 #menu-1 #Programming-l
     body header #hfx #hdwn #lhf #lhng #left #mbar .mbar .bar {
         width: 4vw;
     }
+
+    body main .main-content.main-content-toggle {
+        top: 25vh;
+    }
 }
 
-@media screen and (max-width:800px) and (min-height: 801px) {
+@media screen and (max-width:800px) and (max-height: 801px) {
+    body main .main-content.main-content-toggle {
+        top: 9vh;
+    }
+}
+
+@media screen and (min-width:1200px) and (min-height: 900px) {
+    body main .main-content.main-content-toggle {
+        top: 25vh;
+    }
+}
+
+@media screen and (min-width:1200px) and (min-height: 950px) {
+    body main .main-content.main-content-toggle {
+        top: 20vh;
+    }
+}
+
+@media screen and (max-width:799px) and (min-height: 801px) {
     body header {
         height: 10vh;
     }
@@ -307,12 +336,6 @@ body main .navBar .navBar-menu .navBar-full #navSection-1 #menu-1 #Programming-l
         top: 2vh;
     }
 
-    body main .navBar,
-    body main .navBar .navBar-menu,
-    body main .navBar .navBar-menu .navBar-full {
-        top: 10vh;
-    }
-
     body header #hfx #hdwn #lhf #lhng #left #mbar .mbar {
         width: 5vw;
     }
@@ -327,5 +350,9 @@ body main .navBar .navBar-menu .navBar-full #navSection-1 #menu-1 #Programming-l
 
     body header #hfx #hdwn #lhf #lhng #left #mbar .mbar.mbtn .bar:last-child {
         transform: translateY(0vh) rotate(135deg);
+    }
+
+    body main .main-content.main-content-toggle {
+        top: 7vh;
     }
 }
