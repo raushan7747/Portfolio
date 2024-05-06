@@ -224,7 +224,7 @@ body main .navBar .navBar-menu .navBar-full {
 /* Start Shifting main-contents to the bottom of navbar */
 body main .main-content.main-content-toggle{
     position: relative;
-    top: 15vh;
+    top: 30vh;
 }
 /* End Shifting main-contents to the bottom of navbar */
 /* Start NavBar menus */
