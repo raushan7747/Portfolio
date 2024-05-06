@@ -5,6 +5,6 @@ menu_bar.addEventListener('click', function () {
 
 const navBar = document.getElementById('mbar-list');
 navBar.addEventListener('click', function () {
-  const navBarClass = document.getElementById('navBar')
+  var navBarClass = document.getElementById('navBar');
   navBarClass.classList.toggle('navToggle');
 });

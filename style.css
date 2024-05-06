@@ -21,18 +21,23 @@ body {
     background-color: var(--body);
 }
 
+/* Start the dimensions of header */
+body header {
+    height: 16vh;
+}
+
+/* End the dimensions of header */
 /* Contents and the whole stuffs */
 body main {
     position: absolute;
-    top: 9vh;
-    z-index: 1;
-    padding: 3vh 4vw;
+    z-index: 100;
+    padding: 0vh 4vw;
     font-size: 1.5vw;
 }
 
 /* Start Header(main) */
 body header #hfx {
-    position: fixed;
+    position: absolute;
     width: 100%;
     z-index: 10;
     display: flex;
@@ -100,7 +105,7 @@ body header #hfx #hdwn #lhf #lhng #left #mbar {
 /* Header-Down Ham-Burger Bars-container(4 Bars) */
 body header #hfx #hdwn #lhf #lhng #left #mbar .mbar {
     display: block;
-    width: 4vw;
+    width: 8vw;
     height: 4vh;
     cursor: pointer;
     position: relative;
@@ -109,11 +114,11 @@ body header #hfx #hdwn #lhf #lhng #left #mbar .mbar {
 /* Header-Down Bar of the Ham-Burger */
 body header #hfx #hdwn #lhf #lhng #left #mbar .mbar .bar {
     display: block;
-    width: 2vw;
+    width: 8vw;
     height: .3vh;
     background-color: #333;
     margin: .5vh auto;
-    transition: all 0.3s ease-in-out;
+    transition: all 1000ms 10ms ease-in-out;
 }
 
 /* JavaScript Ham-Burger animation */
@@ -125,12 +130,12 @@ body header #hfx #hdwn #lhf #lhng #left #mbar .mbar.mbtn .bar:nth-child(3) {
 
 /* Header-Down Right-Down transition bar */
 body header #hfx #hdwn #lhf #lhng #left #mbar .mbar.mbtn .bar:first-child {
-    transform: translateY(8px) rotate(135deg);
+    transform: translateY(3px) rotate(45deg);
 }
 
 /* Header-Down Left-Up transition bar */
 body header #hfx #hdwn #lhf #lhng #left #mbar .mbar.mbtn .bar:last-child {
-    transform: translateY(-8px) rotate(45deg);
+    transform: translateY(-10px) rotate(135deg);
 }
 
 /* End JavaScript Ham-Burger animation */
@@ -195,13 +200,27 @@ body header #hfx #hdwn #lhf #lhng #left ul li a #cnct i {
 body main .navBar,
 body main .navBar .navBar-menu,
 body main .navBar .navBar-menu .navBar-full {
-    position: fixed;
-    top: 16vh;
-    background-color: white;
+    position: absolute;
+    left: -100vw;
+    /* z-index: 100; */
     width: 92vw;
     height: 15vw;
+
 }
 
+/* Start smooth Transition and Transformation of navBar */
+.navBar.navToggle {
+    /* display: block; */
+    position: absolute;
+    left: 103vw;
+    transform: translateX(100vw);
+    transition-property: transform;
+    transition-duration: 1000ms;
+    transition-delay: 10ms;
+    transition-timing-function: ease-in-out;
+}
+
+/* End Transition and Transformation of navBar  */
 /* Start NavBar menus */
 body main .navBar .navBar-menu .navBar-full {
     display: flex;
@@ -232,12 +251,11 @@ body main .navBar .navBar-menu .navBar-full #navSection-4 #menu-4 {
     width: 73%;
 }
 
-/* End navBar menus */
-
-.navBar.navToggle {
-    /* smooth Trasition navigation bar toggle */
-    display: none;
+body main .navBar .navBar-menu .navBar-full #navSection-1 #menu-1 #Programming-languages {
+    font-size: 80%;
 }
+
+/* End navBar menus */
 
 /* End main(main-content) */
 
@@ -253,31 +271,20 @@ body main .navBar .navBar-menu .navBar-full #navSection-4 #menu-4 {
         height: 8vh;
     }
 
-    body header #hfx #hdwn #lhf #lhng #left #mbar {
-        padding: 7.5vh 2vw;
-        top: 2vh;
-    }
-
-    body main .navBar,
-    body main .navBar .navBar-menu,
-    body main .navBar .navBar-menu .navBar-full {
-        position: fixed;
-        top: 15.5vh;
-    }
-
     body header #hfx #hdwn #lhf #lhng #left #mbar .mbar {
-        width: 5vw;
+        width: 4vw;
     }
 
     body header #hfx #hdwn #lhf #lhng #left #mbar .mbar .bar {
-        width: 5vw;
+        width: 4vw;
     }
 }
 
 @media screen and (max-width:800px) and (min-height: 801px) {
-    body main{
-        top: 7vh;
+    body header {
+        height: 10vh;
     }
+
     body header #hfx {
         height: 10vh;
         font-size: 2vw;
@@ -297,7 +304,6 @@ body main .navBar .navBar-menu .navBar-full #navSection-4 #menu-4 {
     body main .navBar,
     body main .navBar .navBar-menu,
     body main .navBar .navBar-menu .navBar-full {
-        position: fixed;
         top: 10vh;
     }
 
@@ -307,5 +313,13 @@ body main .navBar .navBar-menu .navBar-full #navSection-4 #menu-4 {
 
     body header #hfx #hdwn #lhf #lhng #left #mbar .mbar .bar {
         width: 5vw;
+    }
+
+    body header #hfx #hdwn #lhf #lhng #left #mbar .mbar.mbtn .bar:first-child {
+        transform: translateY(19px) rotate(45deg);
+    }
+
+    body header #hfx #hdwn #lhf #lhng #left #mbar .mbar.mbtn .bar:last-child {
+        transform: translateY(0vh) rotate(135deg);
     }
 }
