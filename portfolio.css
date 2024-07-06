@@ -1,0 +1,66 @@
+:root {
+    --bgcolor: #87a4acee;
+    --navListBgcolor: #80a0a8e0;
+    --navListHoverTransparent: #99cfcfee;
+    --navListHoverPink: #ff0a99e6;
+    --navListFont: #71e9fce6;
+    --navListShadow: #fc5b5bec;
+    --mainBgcolor: #968e4bc4;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-size: calc(100vw/80);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    z-index: 0;
+}
+
+body header.head {
+    background-color: var(--bgcolor);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh/6.5);
+}
+
+body header div.Profile div#Profile-Logo {
+    width: 20vw;
+    position: absolute;
+    left: -35vw;
+}
+
+body header div.Profile {
+    display: flex;
+    align-items: center;
+    width: 20vw;
+    height: 20vh;
+    position: absolute;
+}
+
+body header div.navList nav ul#navList li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--navListBgcolor);
+    border-radius: 5vh 2vw;
+    width: calc(50vw/4.8);
+    color: #71e9fce6;
+    font-weight: 500;
+    box-shadow: 0.2em 0.2em .5vh -.1vh var(--navListShadow), inset -0.2em -0.2em .5vh -.1vw var(--navListShadow);
+}
+
+body header div.navList nav ul#navList {
+    list-style-type: none;
+    width: calc(100vw/2);
+    height: calc(100vh/8);
+    display: flex;
+    align-content: flex-end;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    z-index: 2;
+}
+
+body main {
+    background-color: var(--mainBgcolor);
+}
