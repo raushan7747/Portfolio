@@ -1,0 +1,43 @@
+:root {
+    --bgColor: #000000;
+    --bgHeader: #14140e;
+    --bgMain: #ffffff;
+    --bgFooter: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--bgColor);
+}
+
+body header,
+body header div.head,
+body header div.head div.headFirstChild {
+    width: 100vw;
+    height: calc(100vh/6);
+    background-color: var(--bgHeader);
+    color: #ffffff;
+}
+
+body main,
+body main div.main,
+body main div.main div.mainFirstChild {
+    width: 40vw;
+    height: 80vh;
+    color: #00ff00;
+}
+
+body main div.main div.mainSecondChild {
+    height: inherit;
+    width: 60vw;
+    position: relative;
+    left: 40vw;
+    top: -80vh;
+}

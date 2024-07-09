@@ -1,0 +1,29 @@
+/* for wide screens and short height like laptops */
+@media (max-height: 800px) and (min-width: 1300px) and (orientation: landscape) {
+
+    body header,
+    body header div.head,
+    body header div.head div.headFirstChild {
+        height: calc(100vh/10.5);
+    }
+}
+
+/* for wide screens and greater in height like tabs */
+@media (min-height: 450px) and (max-width: 1050px) and (orientation: portrait) {
+
+    body header,
+    body header div.head,
+    body header div.head div.headFirstChild {
+        height: calc(100vh/8.5);
+    }
+}
+
+/* for wide screens and greater om heights */
+@media (max-height: 1050px) and (min-width: 500px) and (orientation: portrait) {
+
+    body header,
+    body header div.head,
+    body header div.head div.headFirstChild {
+        height: calc(100vh/11);
+    }
+}
