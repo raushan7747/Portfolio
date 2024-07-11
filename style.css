@@ -41,3 +41,8 @@ body main div.main div.mainSecondChild {
     left: 40vw;
     top: -80vh;
 }
+
+body main div.main div.mainSecondChild img#profileImage {
+    width: 60vw;
+    height: 80vh;
+}
