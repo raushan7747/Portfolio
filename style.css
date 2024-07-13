@@ -17,13 +17,22 @@ body {
     background-color: var(--bgColor);
 }
 
+body header {
+    width: 100vw;
+    height: calc(100vh/6);
+}
+
 body header,
 body header div.head,
 body header div.head div.headFirstChild {
-    width: 100vw;
-    height: calc(100vh/6);
     background-color: var(--bgHeader);
+}
+
+body header div.head div.headFirstChild {
+    display: grid;
     color: #ffffff;
+    grid-template-columns: repeat(5, 1fr);
+    width: 80vw;
 }
 
 body main,
