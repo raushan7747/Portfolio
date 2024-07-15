@@ -26,15 +26,27 @@ body header,
 body header div.head,
 body header div.head div.headFirstChild {
     background-color: var(--bgHeader);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 body header div.head div.headFirstChild {
     display: grid;
+    position: relative;
+    left: 5vw;
     color: #ffffff;
     grid-template-columns: repeat(5, 1fr);
     width: 80vw;
 }
-
+body header div.head div.headFirstChild div.nav{
+    background-color: var(--bgColor);
+    width: 10vw;
+    padding-left: 1.8vw;
+    padding-top: 1vh;
+    padding-bottom: .6vh;
+    border-radius: 1.5vh 1.5vw;
+}
 body main,
 body main div.main,
 body main div.main div.mainFirstChild {

@@ -53,7 +53,7 @@ const textAnimation = (objectValueContainer) => {
             // setting time delay
             setTimeout(() => {
                 headFirstChildAnimationFunction(headFirstChildText, headFirstChildIndex + 1)
-            }, 200)
+            }, 500)
         }
     }
     // animating the text
