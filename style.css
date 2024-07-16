@@ -34,7 +34,7 @@ body header div.head div.headFirstChild {
 body header div.head div.headFirstChild {
     display: grid;
     position: relative;
-    left: 5vw;
+    left: 3vw;
     color: #ffffff;
     grid-template-columns: repeat(5, 1fr);
     width: 80vw;

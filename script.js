@@ -45,26 +45,38 @@ let thirdNav = document.getElementById('thirdNav')
 let fourthNav = document.getElementById('fourthNav')
 let fifthNav = document.getElementById('fifthNav')
 
+// Taking dunderscore(__)
+let span = document.createElement('span');
+let underscore = span.innerText = '_'
+firstNav.appendChild(span);
 
-const inputTypeEffect = (elementToApplyEffect) => {
-    // Taking dunderscore(__)
-    let span = document.createElement('span');
-    span.innerText = '__'
-    elementToApplyEffect.appendChild(span);
-
+const pushInArray = (elementToApplyEffect) => {
     // START taking each element into an ARRAY
     const arr = [];
     for (index = 0; index < elementToApplyEffect.textContent.length; index++) {
         arr.push(elementToApplyEffect.textContent[index]);
     }
-    console.log(arr);
-    // AFTER taking all elements into the ARRAY
+    return arr;
 }
-inputTypeEffect(firstNav);
-inputTypeEffect(secondNav);
-inputTypeEffect(thirdNav);
-inputTypeEffect(fourthNav);
-inputTypeEffect(fifthNav);
+
+// taking all elements of the array in the variable
+let firstNavArray = pushInArray(firstNav);
+let secondNavArray = pushInArray(secondNav);
+let thirdNavArray = pushInArray(thirdNav);
+let fourthNavArray = pushInArray(fourthNav);
+let fifthNavArray = pushInArray(fifthNav);
+
+// AFTER taking all elements into the ARRAY
+const underScoreEffect = (arrayOFElements) => {
+    // cursor effect animation starts
+    let temporary = arrayOFElements[1];
+    arrayOFElements[1] = arrayOFElements[arrayOFElements.length - 1];
+    arrayOFElements[arrayOFElements.length - 1] = temporary;
+    return arrayOFElements;
+}
+
+// calling underscore effect
+underScoreEffect(firstNavArray);console.log(firstNavArray);
 
 // FUNCTION TO PERFORM TEXT ANIMATION
 const textAnimation = (objectValueContainer) => {
@@ -72,7 +84,7 @@ const textAnimation = (objectValueContainer) => {
     // getting text from the container
     const headFirstChildText = headFirstChildContainer.textContent;
 
-    // this will clear the content
+    // this will clear the container
     headFirstChildContainer.textContent = '';
 
     // function to perform animation on text
@@ -90,6 +102,7 @@ const textAnimation = (objectValueContainer) => {
     headFirstChildAnimationFunction(headFirstChildText, 0);
 }
 /**__END__TEXT-ANIMATION__headFirstChild__FUNCTION**/
+
 
 /** START text animation function calls */
 textAnimation(nav1);
