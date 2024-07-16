@@ -1,3 +1,4 @@
+
 /**__START__TEXT-ANIMATION__mainFirstChild**/
 // getting text container
 const mainFirstChildContainer = document.getElementById('mainFirstChild');
@@ -35,6 +36,35 @@ let nav2 = objValue[1]
 let nav3 = objValue[2]
 let nav4 = objValue[3]
 let nav5 = objValue[4]
+
+
+/** FUNTION TO MAKE TYPING EFFICT LIKE INPUTS */
+let firstNav = document.getElementById('firstNav')
+let secondNav = document.getElementById('secondNav')
+let thirdNav = document.getElementById('thirdNav')
+let fourthNav = document.getElementById('fourthNav')
+let fifthNav = document.getElementById('fifthNav')
+
+
+const inputTypeEffect = (elementToApplyEffect) => {
+    // Taking dunderscore(__)
+    let span = document.createElement('span');
+    span.innerText = '__'
+    elementToApplyEffect.appendChild(span);
+
+    // START taking each element into an ARRAY
+    const arr = [];
+    for (index = 0; index < elementToApplyEffect.textContent.length; index++) {
+        arr.push(elementToApplyEffect.textContent[index]);
+    }
+    console.log(arr);
+    // AFTER taking all elements into the ARRAY
+}
+inputTypeEffect(firstNav);
+inputTypeEffect(secondNav);
+inputTypeEffect(thirdNav);
+inputTypeEffect(fourthNav);
+inputTypeEffect(fifthNav);
 
 // FUNCTION TO PERFORM TEXT ANIMATION
 const textAnimation = (objectValueContainer) => {
