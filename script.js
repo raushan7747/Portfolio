@@ -1,4 +1,3 @@
-
 /**__START__TEXT-ANIMATION__mainFirstChild**/
 // getting text container
 const mainFirstChildContainer = document.getElementById('mainFirstChild');
@@ -67,7 +66,7 @@ const textAnimation = (objectValueContainer) => {
 /**__END__TEXT-ANIMATION__headFirstChild__FUNCTION**/
 
 /** START text animation function calls */
-const replaceAnime = (async (toReplaceAnime) => {
+const replaceAnime = (async (toReplaceAnime, toReplaceText) => {
     await textAnimation(toReplaceAnime);
     // Create the new element
     const newDiv = document.createElement('div');
@@ -76,7 +75,7 @@ const replaceAnime = (async (toReplaceAnime) => {
 
     const newLink = document.createElement('a');
     newLink.href = '/r/programming';
-    newLink.textContent = 'Programming';
+    newLink.textContent = toReplaceText;
 
     newDiv.appendChild(newLink);
 
@@ -85,10 +84,10 @@ const replaceAnime = (async (toReplaceAnime) => {
     // Replace the nav1 element with the new element
     toReplaceAnime.replaceWith(newDiv);
 });
-replaceAnime(nav1);
-replaceAnime(nav2);
-replaceAnime(nav3);
-replaceAnime(nav4);
-replaceAnime(nav5);
+replaceAnime(nav1, 'Programming');
+replaceAnime(nav2, 'Development');
+replaceAnime(nav3, 'Interface-less');
+replaceAnime(nav4, 'Data Science');
+replaceAnime(nav5, 'Academics');
 mainTextAnimation(mainFirstChildContainer);
 /** END text animation function calls */
