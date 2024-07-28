@@ -3,6 +3,10 @@
     --bgHeader: #14140e;
     --bgMain: #ffffff;
     --bgFooter: #ffffff;
+    --bashSky: #06a187e5;
+    --bashPurple: #a80dbde5;
+    --bashGreen: #00bd3fe5;
+    --bashYellow: #f1e423e5;
 }
 
 * {
@@ -35,11 +39,12 @@ body header div.head div.headFirstChild {
     display: grid;
     position: relative;
     left: 3vw;
-    color: #ffffff;
+    color: var(--bashPurple);
     grid-template-columns: repeat(5, 1fr);
     width: 80vw;
 }
-body header div.head div.headFirstChild div.nav{
+
+body header div.head div.headFirstChild div.nav {
     background-color: var(--bgColor);
     width: 10vw;
     padding-left: 1.8vw;
@@ -47,23 +52,34 @@ body header div.head div.headFirstChild div.nav{
     padding-bottom: .6vh;
     border-radius: 1.5vh 1.5vw;
 }
-body main,
-body main div.main,
-body main div.main div.mainFirstChild {
-    width: 40vw;
-    height: 80vh;
-    color: #00ff00;
+
+body main div.main div.mfc_1,
+body main div.main div.mfc_2,
+body main div.main div.mfc_3,
+body main div.main div.mfc_4 {
+    height: calc(70vh/4);
+    padding: calc(5vh/4) calc(5vh/4);
+    font-weight: bolder;
+    width: 60vw;
+    color: var(--bashGreen);
 }
 
-body main div.main div.mainSecondChild {
-    height: inherit;
-    width: 60vw;
-    position: relative;
-    left: 40vw;
-    top: -80vh;
+body main div.main div.mfc_5 {
+    width: 100vw;
+    color: var(--bashGreen);
+    font-weight: bolder;
 }
 
-body main div.main div.mainSecondChild img#profileImage {
-    width: 60vw;
-    height: 80vh;
+body main div.main div.mfc_1 span.languages,
+body main div.main div.mfc_2 span.languages,
+body main div.main div.mfc_3 span.languages,
+body main div.main div.mfc_4 span.languages {
+    color: var(--bashPurple);
+}
+
+body main div.main div.mainSecondChild div.msc {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    left: 70vw;
 }
