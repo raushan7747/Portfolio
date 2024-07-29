@@ -1,17 +1,17 @@
 :root {
     --bgColor: #000000;
     --bgHeader: #14140e;
-    --bgMain: #ffffff;
-    --bgFooter: #ffffff;
     --bashSky: #06a187e5;
     --bashPurple: #a80dbde5;
     --bashGreen: #00bd3fe5;
     --bashYellow: #f1e423e5;
+    --bashBlue: #3c8dade5;
 }
 
 * {
     margin: 0;
     padding: 0;
+    font-size: .90rem;
     box-sizing: border-box;
 }
 
@@ -37,8 +37,6 @@ body header div.head div.headFirstChild {
 }
 
 body header div.head div.headFirstChild {
-    display: grid;
-    position: relative;
     color: var(--bashPurple);
     grid-template-columns: repeat(5, 1fr);
 }
@@ -62,6 +60,7 @@ body main div.main div.mfc_4 {
 }
 
 body main div.main div.mfc_5 {
+    padding: calc(5vh/4) calc(5vh/4);
     width: 100vw;
     color: var(--bashGreen);
     font-weight: bolder;
@@ -84,5 +83,5 @@ body main div.main div.mfc_2 span#mfccc_2,
 body main div.main div.mfc_3 span#mfccc_3,
 body main div.main div.mfc_4 span#mfccc_4,
 body main div.main div.mfc_5 span#mfccc_5 {
-    color: var(--bashSky);
+    color: var(--bashBlue);
 }
