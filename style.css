@@ -29,6 +29,7 @@ body header {
 body header,
 body header div.head,
 body header div.head div.headFirstChild {
+    width: 100vw;
     background-color: var(--bgHeader);
     display: flex;
     justify-content: center;
@@ -38,18 +39,14 @@ body header div.head div.headFirstChild {
 body header div.head div.headFirstChild {
     display: grid;
     position: relative;
-    left: 3vw;
     color: var(--bashPurple);
     grid-template-columns: repeat(5, 1fr);
-    width: 80vw;
 }
 
 body header div.head div.headFirstChild div.nav {
     background-color: var(--bgColor);
-    width: 10vw;
-    padding-left: 1.8vw;
-    padding-top: 1vh;
-    padding-bottom: .6vh;
+    padding: 1vh 1.8vw 1vh;
+    margin: 0 calc(100vw/25);
     border-radius: 1.5vh 1.5vw;
 }
 
@@ -70,16 +67,22 @@ body main div.main div.mfc_5 {
     font-weight: bolder;
 }
 
-body main div.main div.mfc_1 span.languages,
-body main div.main div.mfc_2 span.languages,
-body main div.main div.mfc_3 span.languages,
-body main div.main div.mfc_4 span.languages {
+body main div.main div.mfc_1 span.mfc {
+    font-weight: bolder;
+}
+
+body main div.main div.mfc_1 span#mfcc_1,
+body main div.main div.mfc_2 span#mfcc_2,
+body main div.main div.mfc_3 span#mfcc_3,
+body main div.main div.mfc_4 span#mfcc_4,
+body main div.main div.mfc_5 span#mfcc_5 {
     color: var(--bashPurple);
 }
 
-body main div.main div.mainSecondChild div.msc {
-    height: 100vh;
-    width: 100vw;
-    position: absolute;
-    left: 70vw;
+body main div.main div.mfc_1 span#mfccc_1,
+body main div.main div.mfc_2 span#mfccc_2,
+body main div.main div.mfc_3 span#mfccc_3,
+body main div.main div.mfc_4 span#mfccc_4,
+body main div.main div.mfc_5 span#mfccc_5 {
+    color: var(--bashSky);
 }
