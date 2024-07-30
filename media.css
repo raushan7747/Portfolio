@@ -20,6 +20,10 @@
 
 /* for wide screens and greater om heights */
 @media (max-height: 1050px) and (min-width: 500px) and (orientation: portrait) {
+    body main div.main div.mfc_1 span.mfc {
+        font-size: 2vw;
+        font-weight: bolder;
+    }
 
     body header,
     body header div.head,
