@@ -15,8 +15,25 @@
 }
 
 body {
+    display: grid;
+    grid-template-areas: "head" "main" "foot";
     background-color: var(--bgColor);
     font-size: 0.8rem;
+}
+
+body header {
+    display: flex;
+    justify-content: center;
+    height: 8cap;
+    grid-area: head;
+}
+
+body main {
+    grid-area: main;
+}
+
+body footer {
+    grid-area: footer;
 }
 
 body main div.main {
@@ -28,7 +45,8 @@ body main div.main {
         "academics academics"
     ;
 }
-body header div.head{
+
+body header div.head {
     display: flex;
     justify-content: center;
 }
@@ -52,26 +70,32 @@ body header div.head div.headFirstChild {
 }
 
 body header div.head div.headFirstChild div.nav {
+    box-shadow: 0.02em 0.02em .5vh -.1vh var(--bashYellow), inset -0.02em -0.02em .5vh -.1vw var(--bashPurple);
     background-color: var(--bgColor);
     padding: 1vh 0.8vw 1vh;
-    /* margin: 0 calc(100vw / 20); */
     border-radius: 1.5vh 1.5vw;
 }
-body header div.head div.headFirstChild div#firsNav{
+
+body header div.head div.headFirstChild div#firsNav {
     grid-area: Programming;
 }
-body header div.head div.headFirstChild div#secondNav{
+
+body header div.head div.headFirstChild div#secondNav {
     grid-area: Development;
 }
-body header div.head div.headFirstChild div#thirdNav{
+
+body header div.head div.headFirstChild div#thirdNav {
     grid-area: Interface-less;
 }
-body header div.head div.headFirstChild div#fourthNav{
+
+body header div.head div.headFirstChild div#fourthNav {
     grid-area: DataScience;
 }
-body header div.head div.headFirstChild div#fifthNav{
+
+body header div.head div.headFirstChild div#fifthNav {
     grid-area: Academics;
 }
+
 body main div.main div.mfc_1 {
     grid-area: programming;
 }
@@ -88,28 +112,35 @@ body main div.main div.mfc_4 {
     grid-area: dataScience;
 }
 
+body main div.main div.mfc_1::first-line,
+body main div.main div.mfc_2::first-line,
+body main div.main div.mfc_3::first-line,
+body main div.main div.mfc_4::first-line,
+body main div.main div.mfc_5::first-line {
+    /* box-shadow: -0.05em 0.01em 0.6em .18em var(--bashYellow); */
+}
+
 body main div.main div.mfc_1,
 body main div.main div.mfc_2,
 body main div.main div.mfc_3,
 body main div.main div.mfc_4 {
     padding: calc(5vh/4) calc(5vh/4);
-    font-weight: bolder;
     color: var(--bashGreen);
+
 }
 
 body main div.main div.mfc_5 {
     grid-area: academics;
     padding: calc(5vh/4) calc(5vh/4);
     color: var(--bashGreen);
-    font-weight: bolder;
 }
 
 body main div.main div.mainSecondChild {
     grid-area: side;
 }
 
-body main div.main div.mfc_1 span.mfc {
-    font-size: 1.2em;
+body main div.main span.mfc {
+    font-size: 1.25em;
     font-weight: bolder;
 }
 
@@ -118,6 +149,7 @@ body main div.main div.mfc_2 span#mfcc_2,
 body main div.main div.mfc_3 span#mfcc_3,
 body main div.main div.mfc_4 span#mfcc_4,
 body main div.main div.mfc_5 span#mfcc_5 {
+    box-shadow: 0 0.01em 0.2em .01px #fd0000ee;
     color: var(--bashPurple);
 }
 
