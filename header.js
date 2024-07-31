@@ -36,12 +36,12 @@ const textAnimation = (objectValueContainer) => {
 /**__END__TEXT-ANIMATION__headFirstChild__FUNCTION**/
 
 /**__START__TEXT-ANIMATION__REPLACEMENT__FUNCTION**/
-const replaceAnime = (async (toReplaceAnime, toReplaceText) => {
+const replaceAnime = (async (toReplaceAnime, toReplaceText, toSetID) => {
     await textAnimation(toReplaceAnime);
     // Create the new element
     const newDiv = document.createElement('div');
     newDiv.className = 'nav';
-    newDiv.id = 'nav';
+    newDiv.id = toSetID;
 
     const newLink = document.createElement('a');
     newLink.style.textDecoration = 'none';
@@ -60,10 +60,10 @@ const replaceAnime = (async (toReplaceAnime, toReplaceText) => {
 /**__END__TEXT-ANIMATION__REPLACEMENT__FUNCTION**/
 
 /** START text animation function calls */
-replaceAnime(nav1, 'Programming');
-replaceAnime(nav2, 'Development');
-replaceAnime(nav3, 'Interface-less');
-replaceAnime(nav4, 'Data Science');
-replaceAnime(nav5, 'Academics');
+replaceAnime(nav1, 'Programming', 'firstNav');
+replaceAnime(nav2, 'Development', 'secondNav');
+replaceAnime(nav3, 'Interface-less', 'thirdNav');
+replaceAnime(nav4, 'Data Science', 'fourthNav');
+replaceAnime(nav5, 'Academics', 'fifthNav');
 /** END text animation function calls */
 
